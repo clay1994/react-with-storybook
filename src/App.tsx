@@ -23,7 +23,10 @@ const mockContacts: Contact[] = [
   { id: 1, name: 'Dianne Russell', email: 'dianne@example.com', avatarUrl: '' },
   { id: 2, name: 'Ronald Richards', email: 'ronald@example.com', avatarUrl: '' },
   { id: 3, name: 'Arlene McCoy', email: 'arlene@example.com', avatarUrl: '' },
-  // ... more
+  { id: 4, name: 'Darlene Robertson', email: 'darlene@example.com', avatarUrl: '' },
+  { id: 5, name: 'Theresa Webb', email: 'theresa@example.com', avatarUrl: '' },
+  { id: 6, name: 'Savannah Nguyen', email: 'savannah@example.com', avatarUrl: '' },
+  { id: 7, name: 'Jerome Bell', email: 'jerome@example.com', avatarUrl: '' },
 ];
 
 function App() {
@@ -42,7 +45,7 @@ function App() {
       {/* Section: Attended */}
       <div style={{ marginTop: '24px' }}>
         <Section>
-          <SectionHeader title="Contacts" />
+          <SectionHeader title="Attended" />
           {filtered.map(contact => (
             <ContactListItem
               key={contact.id}

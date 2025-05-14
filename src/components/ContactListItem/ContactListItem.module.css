@@ -1,13 +1,20 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  gap: 8px;
-  width: 100%;
-  max-width: 432px;
-  border: 1px dashed #000000;
-  border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    width: 100%;
+    max-width: 432px;
+    background-color: #eae7e7;
+    cursor: pointer;
+    margin: 2px 0 2px 0;
+    border-radius: 5px;
 }
+
+.container:hover {
+  background-color: #cccccc; /* or any grey color you prefer */
+}
+
 
 .avatar { 
     width:40px; 
