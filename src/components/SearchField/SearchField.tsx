@@ -1,5 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import styles from './SearchField.module.css';
+
 export interface SearchFieldProps { 
     value: string; 
     placeholder?: string; 

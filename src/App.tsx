@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import {
+  SearchField
+} from './components/SearchField/SearchField';
+import {
+  ContactListItem
+} from './components/ContactListItem/ContactListItem';
+import {
+  SectionHeader
+} from './components/SectionHeader/SectionHeader';
+import {
+  Section
+} from './components/Section/Section';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+interface Contact {
+  id: number;
+  name: string;
+  email: string;
+  avatarUrl?: string;
 }
 
-export default App
+const mockContacts: Contact[] = [
+  { id: 1, name: 'Dianne Russell', email: 'dianne@example.com', avatarUrl: '' },
+  { id: 2, name: 'Ronald Richards', email: 'ronald@example.com', avatarUrl: '' },
+  { id: 3, name: 'Arlene McCoy', email: 'arlene@example.com', avatarUrl: '' },
+  // ... more
+];
+
+function App() {
+  const [search, setSearch] = useState('');
+
+  const filtered = mockContacts.filter(c =>
+    c.name.toLowerCase().includes(search.toLowerCase()) ||
+    c.email.toLowerCase().includes(search.toLowerCase())
+  );
+
+  return (
+    <div style={{ padding: '16px' }}>
+      {/* Search Field */}
+      <SearchField value={search} onChange={setSearch} placeholder="Search Contacts..." />
+
+      {/* Section: Attended */}
+      <div style={{ marginTop: '24px' }}>
+        <Section>
+          <SectionHeader title="Contacts" />
+          {filtered.map(contact => (
+            <ContactListItem
+              key={contact.id}
+              name={contact.name}
+              email={contact.email}
+              avatarUrl={contact.avatarUrl}
+            />
+          ))}
+        </Section>
+      </div>
+    </div>
+  );
+}
+
+export default App;
