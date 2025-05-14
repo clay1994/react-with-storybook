@@ -7,4 +7,4 @@ const Template: StoryFn<ContactListItemProps> = (args) => <ContactListItem {...a
 
 export const Default = Template.bind({});
 
-Default.args = { name: 'Jane Doe', email: 'jane@example.com', avatarUrl: '' };
+Default.args = { name: 'Jane Doe', email: 'jane@example.com', avatarUrl: 'https://avatar.iran.liara.run/public/1' };

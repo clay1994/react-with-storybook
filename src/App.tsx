@@ -20,13 +20,13 @@ interface Contact {
 }
 
 const mockContacts: Contact[] = [
-  { id: 1, name: 'Dianne Russell', email: 'dianne@example.com', avatarUrl: '' },
-  { id: 2, name: 'Ronald Richards', email: 'ronald@example.com', avatarUrl: '' },
-  { id: 3, name: 'Arlene McCoy', email: 'arlene@example.com', avatarUrl: '' },
-  { id: 4, name: 'Darlene Robertson', email: 'darlene@example.com', avatarUrl: '' },
-  { id: 5, name: 'Theresa Webb', email: 'theresa@example.com', avatarUrl: '' },
-  { id: 6, name: 'Savannah Nguyen', email: 'savannah@example.com', avatarUrl: '' },
-  { id: 7, name: 'Jerome Bell', email: 'jerome@example.com', avatarUrl: '' },
+  { id: 1, name: 'Dianne Russell', email: 'dianne@example.com', avatarUrl: 'https://www.w3schools.com/howto/img_avatar.png' },
+  { id: 2, name: 'Ronald Richards', email: 'ronald@example.com', avatarUrl: 'https://www.w3schools.com/w3images/avatar2.png' },
+  { id: 3, name: 'Arlene McCoy', email: 'arlene@example.com', avatarUrl: 'https://www.w3schools.com/w3images/avatar5.png' },
+  { id: 4, name: 'Darlene Robertson', email: 'darlene@example.com', avatarUrl: 'https://img.freepik.com/premium-vector/person-with-blue-shirt-that-says-name-person_1029948-7040.jpg' },
+  { id: 5, name: 'Theresa Webb', email: 'theresa@example.com', avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC2iQvAPNLkPLllOM8WVfxC7-sZoa7_SfU9g&s' },
+  { id: 6, name: 'Savannah Nguyen', email: 'savannah@example.com', avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtV9gfYw0MLRJDCzusdtjAn3jJqZoMgAMjU8BZj7cD5XLm8Zj-hFNOem5kPPj5IiUIJp8&usqp=CAU' },
+  { id: 7, name: 'Jerome Bell', email: 'jerome@example.com', avatarUrl: 'https://avatar.iran.liara.run/public/1' },
 ];
 
 function App() {

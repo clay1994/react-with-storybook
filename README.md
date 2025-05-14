@@ -1,10 +1,21 @@
 # React Component Assessment
 
-## Setup
+## How to run the project
 
 ```bash
+clone the repo
 npm install
 npm run dev
-npm run storybook
+```
+
+## How to run unit tests
+
+```bash
 npm run test
+```
+
+## How to run storybook
+
+```bash
+npm run storybook
 ```
