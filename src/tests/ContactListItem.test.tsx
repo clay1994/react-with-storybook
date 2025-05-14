@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { ContactListItem } from '../components/ContactListItem/ContactListItem';
+import React from 'react';
 
 test('renders name and email', () => {
   render(<ContactListItem name="N" email="e@e.com"/>);

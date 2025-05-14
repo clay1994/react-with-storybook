@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { SearchField } from '../components/SearchField/SearchField';
+import React from 'react';
 
 test('renders and updates', () => {
   const handle = jest.fn(); render(<SearchField value="" onChange={handle}/>);
